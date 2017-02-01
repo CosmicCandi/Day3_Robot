@@ -76,7 +76,8 @@ our_class = ["Ron", "David", "Nancy", "Kalea", "Laura", "Dave", "Demetra", "Phil
 "Ben", "Kendrick", "Michael", "Miguel"]
 # => Do the previous using an Enumerable method other than each
 #for each name, turn it into a variable where variable = robot.new(variable) and then send it into an array.
-robot_array = our_class.collect {|newrobot| Robot.new(newrobot)}
+class_array = [Robot, BendingUnit, ActorUnit]
+robot_array = our_class.collect {|newrobot| class_array.sample.new(newrobot)}
 
 puts robot_array.inspect
 
